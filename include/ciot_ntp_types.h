@@ -37,19 +37,17 @@ typedef enum __attribute__((packed))
 
 typedef struct __attribute__((packed))
 {
-#if CIOT_CONFIG_FEATURE_NTP
     uint8_t op_mode;
     uint8_t sync_mode;
     uint32_t sync_interval;
     char timezone[16];
     char server[CIOT_CONFIG_NTP_SERVERS_COUNT][64];
-#endif
 } ciot_ntp_cfg_t;
 
 typedef struct __attribute__((packed))
 {
     ciot_ntp_state_t state;
-    time_t last_sync;
+    uint64_t last_sync;
     uint16_t sync_count;
     uint8_t init : 1;
     uint8_t sync : 1;
