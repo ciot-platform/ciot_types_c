@@ -34,10 +34,10 @@ typedef enum __attribute__((packed))
     CIOT_REQ_PROXY_MSG,
 } ciot_req_type_t;
 
-// typedef struct __attribute__((packed))
-// {
+typedef struct __attribute__((packed))
+{
 
-// } ciot_cfg_t;
+} ciot_cfg_t;
 
 typedef struct __attribute__((packed))
 {
@@ -83,7 +83,7 @@ typedef struct __attribute__((packed))
 
 typedef union __attribute__((packed))
 {
-    // ciot_cfg_t config;
+    ciot_cfg_t config;
     ciot_status_t status;
     ciot_req_t request;
 } ciot_data_u;
