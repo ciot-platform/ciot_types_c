@@ -57,8 +57,8 @@ typedef struct __attribute__((packed))
 {
     char ssid[32];
     char password[64];
-    ciot_tcp_cfg_t tcp;
     ciot_wifi_type_t type;
+    ciot_tcp_cfg_t tcp;
 } ciot_wifi_cfg_t;
 
 typedef struct __attribute__((packed))
